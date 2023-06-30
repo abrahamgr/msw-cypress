@@ -1,8 +1,17 @@
 {
   "name": "msw-cypress",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "Example of using MSW within Cypress",
+  "keywords": [
+    "vite",
+    "vitest",
+    "react",
+    "typescript",
+    "msw",
+    "cypress"
+  ],
   "scripts": {
     "dev": "vite --port 3000",
     "build": "tsc && vite build",
@@ -12,6 +21,10 @@
     "test": "vitest --run",
     "test:ci": "vitest run --coverage",
     "test:ui": "vitest --ui --coverage"
+  },
+  "repository": {
+    "type": "git", 
+    "url": "https://github.com/abrahamgr/msw-cypress" 
   },
   "dependencies": {
     "react": "^18.2.0",

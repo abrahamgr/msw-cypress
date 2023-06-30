@@ -18,6 +18,7 @@ Recently I had the requirement to re-use handlers we already have created for un
 Install [msw](https://mswjs.io/docs/getting-started/install) and the thing is that we will configure for browser but we wont start worker from client instead we will do in Cypress, only add the `mockServiceWorker.js` file by running:
 
 ```bash
+npm add -D msw
 npx msw init public/ --save
 ```
 
