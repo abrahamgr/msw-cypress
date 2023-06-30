@@ -4,10 +4,10 @@ Example of using MSW within Cypress
 
 ## Tools
 
-- vite + React + Typescript
-- vitest
-- MSW
-- Cypress
+- [vite + React + Typescript](https://vitejs.dev/guide/)
+- [vitest](https://vitest.dev/)
+- [MSW](https://mswjs.io/)
+- [Cypress](https://www.cypress.io/)
 
 ## Advantage
 
@@ -87,9 +87,10 @@ export const sampleServerHandler = rest.post(apiPath, async (req, res, ctx) => {
 });
 ```
 
-Setup server for tests
+Setup server for tests:
 
 ```ts
+// mocks/server.ts
 import { setupServer } from 'msw/node';
 import { itemsHandler } from './items';
 
@@ -97,7 +98,7 @@ import { itemsHandler } from './items';
 export const server = setupServer(itemsHandler);
 ```
 
-Setup config for all tests to use MSW
+Setup config for all tests to use MSW:
 
 ```typescript
 // src/setupTests.ts
@@ -116,14 +117,14 @@ afterAll(() => {
 });
 ```
 
-Make reference to this setup file
+Make reference to this setup file:
 
 ```typescript
 // vite.config.ts under test
 setupFiles: 'src/setupTests.ts',
 ```
 
-Add our test
+Add our unit testing:
 
 ```tsx
 // Request.test.tsx
@@ -155,7 +156,7 @@ test('Render component', async () => {
 });
 ```
 
-## Add Cypress
+## Cypress
 
 Install Cypress
 
