@@ -13,11 +13,11 @@
     "cypress"
   ],
   "scripts": {
-    "dev": "vite --port 3000",
+    "dev": "vite",
     "build": "tsc && vite build",
     "cypress": "cypress open",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview --port 3000",
+    "preview": "vite preview",
     "test": "vitest --run",
     "test:ci": "vitest run --coverage",
     "test:ui": "vitest --ui --coverage"

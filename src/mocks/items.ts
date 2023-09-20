@@ -9,7 +9,7 @@ export const itemsHandler = rest.post(apiPath, async (req, res, ctx) => {
   )
 })
 
-export const sampleServerHandler = rest.post(apiPath, async (req, res, ctx) => {
+export const sampleServerHandler = rest.post(apiPath, async (_, res, ctx) => {
   return res(
     ctx.json({
       value: 'Hi from Server/Cypress'

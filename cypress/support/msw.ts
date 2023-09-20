@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 import { setupWorker, type SetupWorker, type RequestHandler } from 'msw'
 
 declare global {
@@ -19,10 +17,10 @@ before(() => {
 
 Cypress.on('test:before:run', () => {
   if (!worker) return
-
   worker.resetHandlers()
 })
 
 Cypress.Commands.add('interceptRequest', (...handlers: RequestHandler[]) => {
+  if (!worker) return
   worker.use(...handlers)
 })
